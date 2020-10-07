@@ -19,6 +19,7 @@ on:
   pull_request:
     branches:
       - master
+      - branch
     types: [review_requested]
   workflow_dispatch:
 jobs:
