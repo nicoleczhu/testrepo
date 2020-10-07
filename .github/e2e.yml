@@ -18,6 +18,8 @@ name: "CI Test"
 on:
   push:
   pull_request:
+    branches:
+      - master
     types: [review_requested]
   workflow_dispatch:
 jobs:
@@ -34,4 +36,4 @@ jobs:
 
     # Run the test
     - name: Run Basic Test
-      run: echo helloworld
+      run: echo ${{github.event}}
