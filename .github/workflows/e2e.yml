@@ -20,7 +20,7 @@ on:
     branches:
       - master
       - branch
-    types: [review_requested]
+    types: [labeled]
   workflow_dispatch:
 jobs:
   # Job key
