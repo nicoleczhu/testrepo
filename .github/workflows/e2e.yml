@@ -16,12 +16,16 @@ name: "CI Test"
 
 # Run this workflow every time a new commit pushed to your repository
 on:
+  issues:
+    types: [opened, reopened]
   pull_request:
     branches:
       - master
       - branch
     types: [labeled]
   workflow_dispatch:
+env:
+  PROJECT_ID: stackdriver-sandbox-230822
 jobs:
   # Job key
   ci-test:
@@ -36,4 +40,4 @@ jobs:
 
     # Run the test
     - name: Run Basic Test
-      run: echo ${{github.event}}
+      run: echo ${{ env.PROJECT_ID }}
