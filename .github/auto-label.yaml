@@ -1,2 +1,7 @@
+# This config labels all PRs with changes in sample dir as "sample"
 language:
   pullrequest: true
+  labelprefix: ''
+  paths:
+    .: ''
+    samples: 'sample'
